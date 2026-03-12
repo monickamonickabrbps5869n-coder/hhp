@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import flavor1 from './assets/flavor1.png';
 import flavor2 from './assets/flavor2.png';
 import flavor3 from './assets/flavor3.png';
@@ -144,6 +145,7 @@ function App() {
         <div className="logo">Antigravity.</div>
         <div style={{display:'flex',gap:'1rem',alignItems:'center'}}>
           <CartIcon count={cartCount} onClick={() => setModal('cart')} />
+          <Link to="/login" className="nav-login-link">Sign In</Link>
           <button className="cta-button" style={{padding:'0.6rem 1.5rem',fontSize:'1rem'}} onClick={() => setModal('cart')}>Order Now</button>
         </div>
       </nav>
